@@ -269,6 +269,7 @@ body {
 .slide {
     display: none;
     animation: fadeIn 0.8s ease-in-out;
+    height: 100vh
 }
 
 .slide.active {
@@ -340,6 +341,10 @@ body {
 /* Ensure slide images have fallback handling */
 .slide img {
     transition: opacity 0.3s ease;
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+    min-height: 100vh !important;
 }
 
 .slide img.image-error {
