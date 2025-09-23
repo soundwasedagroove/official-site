@@ -31,44 +31,7 @@ function initializeElements() {
     muteIcon = document.getElementById('mute-icon');
 }
 
-// Slideshow functionality
-function initializeSlideshow() {
-    slideInterval = setInterval(nextSlide, 5000);
-}
 
-function setSlide(index) {
-    // Hide current slide
-    const currentSlideElement = document.getElementById(`slide-${currentSlide}`);
-    const currentIndicator = document.querySelector(`[data-testid="slide-indicator-${currentSlide}"]`);
-    
-    if (currentSlideElement) {
-        currentSlideElement.classList.remove('active');
-    }
-    if (currentIndicator) {
-        currentIndicator.classList.remove('active');
-    }
-    
-    // Show new slide
-    currentSlide = index;
-    const newSlideElement = document.getElementById(`slide-${currentSlide}`);
-    const newIndicator = document.querySelector(`[data-testid="slide-indicator-${currentSlide}"]`);
-    
-    if (newSlideElement) {
-        newSlideElement.classList.add('active');
-    }
-    if (newIndicator) {
-        newIndicator.classList.add('active');
-    }
-    
-    // Reset interval
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000);
-}
-
-function nextSlide() {
-    const nextIndex = (currentSlide + 1) % 3; // 3 slides total
-    setSlide(nextIndex);
-}
 
 // Handle image loading errors
 function handleImageError(img) {

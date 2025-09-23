@@ -25,23 +25,16 @@
         <header id="header" class="fixed top-0 w-full z-50 floating-nav border-b border-border transition-all duration-300">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl">
-                        W
+                    <div class="w-12 h-12 rounded-full  flex items-center justify-center text-white font-bold text-xl">
+                        <img src="images/logo.png" class="logoimg">
                     </div>
-                    <div class="text-xl font-bold">早稲田祭ライブ2024</div>
                 </div>
-                <nav class="hidden md:flex space-x-6">
-                    <button onclick="scrollToSection('merchandise')" class="hover:text-primary transition-colors" data-testid="nav-merchandise">
-                        物販
-                    </button>
-                    <button onclick="scrollToSection('event-details')" class="hover:text-primary transition-colors" data-testid="nav-event-details">
-                        企画詳細
-                    </button>
+                <nav class=" md:flex space-x-6">
                     <button onclick="scrollToSection('artists')" class="hover:text-primary transition-colors" data-testid="nav-artists">
                         アーティスト
                     </button>
-                    <button onclick="scrollToSection('schedule')" class="hover:text-primary transition-colors" data-testid="nav-schedule">
-                        スケジュール
+                    <button onclick="scrollToSection('event-details')" class="hover:text-primary transition-colors" data-testid="nav-event-details">
+                        企画詳細
                     </button>
                     <button onclick="scrollToSection('venue')" class="hover:text-primary transition-colors" data-testid="nav-venue">
                         会場案内
@@ -55,20 +48,14 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden bg-slate-900/98 border-b border-border hidden">
                 <nav class="container mx-auto px-4 py-4 space-y-4">
-                    <button onclick="scrollToSection('merchandise'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-merchandise">
-                        物販
+                    <button onclick="scrollToSection('artists'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-merchandise">
+                        アーティスト
                     </button>
                     <button onclick="scrollToSection('event-details'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-event-details">
                         企画詳細
                     </button>
-                    <button onclick="scrollToSection('artists'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-artists">
-                        アーティスト
-                    </button>
-                    <button onclick="scrollToSection('schedule'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-schedule">
-                        スケジュール
-                    </button>
                     <button onclick="scrollToSection('venue'); closeMobileMenu()" class="block w-full text-left hover:text-primary transition-colors" data-testid="mobile-nav-venue">
-                        会場案内
+                        アクセス
                     </button>
                 </nav>
             </div>
@@ -77,15 +64,7 @@
         <!-- Hero Slideshow Section -->
         <section class="relative h-screen slideshow-container hero-gradient">
             <div id="slide-0" class="slide active absolute inset-0 slide-fallback slide-fallback-1">
-                <img src="images/test2.png" alt="Band performing live on stage" class="w-full h-full object-cover" onerror="handleImageError(this)">
-                <div class="absolute inset-0  bg-opacity-40"></div>
-            </div>
-            <div id="slide-1" class="slide absolute inset-0 slide-fallback slide-fallback-2">
-                <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" alt="Rock concert with enthusiastic crowd" class="w-full h-full object-cover" onerror="handleImageError(this)">
-                <div class="absolute inset-0  bg-opacity-40"></div>
-            </div>
-            <div id="slide-2" class="slide absolute inset-0 slide-fallback slide-fallback-3">
-                <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080" alt="Music festival stage performance" class="w-full h-full object-cover" onerror="handleImageError(this)">
+                <img src="images/artist.jpg" alt="artist pict" class="w-full h-full object-cover" onerror="handleImageError(this)">
                 <div class="absolute inset-0  bg-opacity-40"></div>
             </div>
 
@@ -93,14 +72,12 @@
             <div class="absolute inset-0 flex items-center justify-center text-center">
                 <div class="max-w-4xl px-4">
                     <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-lg">
-                        早稲田祭<br />
-                        <span class="text-accent">LIVE 2024</span>
+                        Sound!&nbsp;Waseda Groove<br />
+                        <span class="text-accent">ワセイロ、まざれ</span>
                     </h1>
-                    <p class="text-2xl md:text-3xl text-white mb-8 drop-shadow-lg">
-                        音楽で繋がる、青春の瞬間
-                    </p>
+
                     <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold transition-all hover:scale-105 rounded-lg" data-testid="button-ticket-purchase">
+                        <button class="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold transition-all hover:scale-105 rounded-lg" data-testid="button-ticket-purchase" onclick="location.href='https://my.waseda.jp/login/login'">
                             チケット購入
                         </button>
                         <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold transition-all rounded-lg" data-testid="button-view-details">
@@ -109,76 +86,37 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Slideshow Controls -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                <button onclick="setSlide(0)" class="w-3 h-3 rounded-full transition-all slide-indicator active" data-testid="slide-indicator-0"></button>
-                <button onclick="setSlide(1)" class="w-3 h-3 rounded-full transition-all slide-indicator" data-testid="slide-indicator-1"></button>
-                <button onclick="setSlide(2)" class="w-3 h-3 rounded-full transition-all slide-indicator" data-testid="slide-indicator-2"></button>
-            </div>
         </section>
 
-        <!-- Merchandise Section -->
-        <section id="merchandise" class="py-20 bg-card text-card-foreground">
+            <!-- Artists Section -->
+        <section id="artists" class="py-20 bg-card text-card-foreground">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-5xl font-bold mb-6 gradient-bg bg-clip-text text-transparent">物販情報</h2>
-                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        アーティストの公式グッズや限定アイテムを販売いたします
-                    </p>
+                    <h2 class="text-3xl font-bold mb-6 gradient-bg bg-clip-text">出演アーティスト</h2>
                 </div>
                 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8">
-                        <div class="card bg-muted p-6">
-                            <div class="p-0">
-                                <h3 class="text-2xl font-semibold mb-4 flex items-center">
-                                    <i class="fas fa-map-marker-alt text-primary mr-3"></i>
-                                    販売場所
-                                </h3>
-                                <p class="text-lg" data-testid="text-merchandise-location">早稲田大学 学生会館前特設ブース</p>
-                                <p class="text-muted-foreground mt-2">大隈講堂から徒歩3分</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card bg-muted p-6">
-                            <div class="p-0">
-                                <h3 class="text-2xl font-semibold mb-4 flex items-center">
-                                    <i class="fas fa-clock text-secondary mr-3"></i>
-                                    販売時間
-                                </h3>
-                                <p class="text-lg" data-testid="text-merchandise-hours">10:00 - 17:00（両日）</p>
-                                <p class="text-muted-foreground mt-2">※売り切れ次第終了</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card bg-muted p-6">
-                            <div class="p-0">
-                                <h3 class="text-2xl font-semibold mb-4 flex items-center">
-                                    <i class="fas fa-credit-card text-accent mr-3"></i>
-                                    支払い方法
-                                </h3>
-                                <p class="text-lg">現金・各種電子マネー対応</p>
-                                <div class="flex space-x-3 mt-3">
-                                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">現金</span>
-                                    <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Suica</span>
-                                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">PayPay</span>
-                                </div>
-                            </div>
+                <div class="grid  gap-8">
+                    <!-- Artist 1 -->
+                    <div class="card bg-muted overflow-hidden hover-lift">
+                        <img src="images/artist2.jpg" alt="Lead guitarist performing" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-testid="text-artist-1-name">ハンブレッダーズ</h3>
+                            <p class="text-muted-foreground">
+                                2009年、高校の文化祭出演のために結成。<br>
+                                ファンクラブの名称は「帰宅部」。<br>
+                                『銀河高速』『再生』『ファイナルボーイフレンド』などが人気。<br>
+                                2025年10月19日には、自身初の主催フェス「GALAXY PARK」を大阪城ホールにて開催。<br>
+
+                            </p>
                         </div>
                     </div>
                     
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Concert merchandise display" class="rounded-xl shadow-2xl w-full hover-lift">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h4 class="text-2xl font-bold">限定グッズ</h4>
-                            <p class="text-lg">Tシャツ・タオル・ステッカー等</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
+
+
 
         <div class="section-divider"></div>
 
@@ -186,10 +124,7 @@
         <section id="event-details" class="py-20 light-section bg-muted text-foreground">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-5xl font-bold mb-6 text-primary">企画詳細</h2>
-                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        早稲田祭2024で開催される特別ライブイベント
-                    </p>
+                    <h2 class="text-3xl font-bold mb-6 text-primary">企画詳細</h2>
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-12">
@@ -201,7 +136,7 @@
                                     <i class="fas fa-music text-2xl text-primary mt-1"></i>
                                     <div>
                                         <h4 class="text-xl font-semibold">企画名</h4>
-                                        <p class="text-lg text-muted-foreground" data-testid="text-event-name">早稲田祭ライブ2024 - 青春音楽祭</p>
+                                        <p class="text-lg text-muted-foreground" data-testid="text-event-name">ハンブレッダーズ Special Live －ワセイロ、まざれ－</p>
                                     </div>
                                 </div>
                                 
@@ -209,8 +144,8 @@
                                     <i class="fas fa-calendar text-2xl text-secondary mt-1"></i>
                                     <div>
                                         <h4 class="text-xl font-semibold">開催日時</h4>
-                                        <p class="text-lg text-muted-foreground" data-testid="text-event-dates">2024年11月2日(土) - 11月3日(日)</p>
-                                        <p class="text-lg text-muted-foreground">両日とも 13:00 - 20:00</p>
+                                        <p class="text-lg text-muted-foreground" data-testid="text-event-dates">2025年11月1日(土)</p>
+                                        <p class="text-lg text-muted-foreground">17:00 - 18:00（16:00開場）</p>
                                     </div>
                                 </div>
                                 
@@ -218,8 +153,8 @@
                                     <i class="fas fa-map-marker-alt text-2xl text-accent mt-1"></i>
                                     <div>
                                         <h4 class="text-xl font-semibold">会場</h4>
-                                        <p class="text-lg text-muted-foreground" data-testid="text-venue-name">早稲田大学 大隈記念講堂</p>
-                                        <p class="text-sm text-muted-foreground">〒169-8050 東京都新宿区西早稲田1-6-1</p>
+                                        <p class="text-lg text-muted-foreground" data-testid="text-venue-name">早稲田大学 戸山キャンパス 早稲田アリーナ (37号館)</p>
+                                        <p class="text-sm text-muted-foreground">〒162-0052 東京都新宿区戸山1丁目24-1</p>
                                     </div>
                                 </div>
                             </div>
@@ -231,22 +166,16 @@
                             <h3 class="text-3xl font-bold mb-6 text-primary">チケット情報</h3>
                             <div class="space-y-6">
                                 <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg text-white">
-                                    <h4 class="text-2xl font-semibold mb-2">一般チケット</h4>
+                                    <h4 class="text-2xl font-semibold mb-2">チケット</h4>
                                     <p class="text-3xl font-bold" data-testid="text-general-price">¥3,500</p>
-                                    <p class="text-sm opacity-90">当日券 ¥4,000</p>
                                 </div>
                                 
                                 <div class="bg-gradient-to-r from-secondary to-accent p-6 rounded-lg text-white">
-                                    <h4 class="text-2xl font-semibold mb-2">学生チケット</h4>
-                                    <p class="text-3xl font-bold" data-testid="text-student-price">¥2,500</p>
-                                    <p class="text-sm opacity-90">学生証の提示が必要</p>
+                                    <h4 class="text-2xl font-semibold mb-2">抽選受付期間</h4>
+                                    <p class="text-xl font-bold" data-testid="text-student-price">9月25日(木) 11:00 ～ 10月2日(木) 11:00</p>
                                 </div>
                                 
-                                <div class="bg-gradient-to-r from-accent to-primary p-6 rounded-lg text-white">
-                                    <h4 class="text-2xl font-semibold mb-2">VIPチケット</h4>
-                                    <p class="text-3xl font-bold" data-testid="text-vip-price">¥6,000</p>
-                                    <p class="text-sm opacity-90">最前列確約・特典付き</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -256,180 +185,13 @@
 
         <div class="section-divider"></div>
 
-        <!-- Artists Section -->
-        <section id="artists" class="py-20 bg-card text-card-foreground">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-5xl font-bold mb-6 gradient-bg bg-clip-text text-transparent">出演アーティスト</h2>
-                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        今回の早稲田祭に出演する素晴らしいアーティストたち
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Artist 1 -->
-                    <div class="card bg-muted overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Lead guitarist performing" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-testid="text-artist-1-name">ELECTRIC WAVES</h3>
-                            <p class="text-primary font-semibold mb-3">ロックバンド</p>
-                            <p class="text-muted-foreground">
-                                2019年結成の4人組ロックバンド。力強いサウンドと心に響くメロディーで若者を中心に人気急上昇中。
-                            </p>
-                            <div class="mt-4 flex space-x-2">
-                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Rock</span>
-                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">J-Pop</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Artist 2 -->
-                    <div class="card bg-muted overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Female vocalist performing" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-testid="text-artist-2-name">LUNA VOICE</h3>
-                            <p class="text-secondary font-semibold mb-3">シンガーソングライター</p>
-                            <p class="text-muted-foreground">
-                                透明感のある歌声と心に染みる歌詞で多くの人を魅了。アコースティックな楽曲を中心に活動。
-                            </p>
-                            <div class="mt-4 flex space-x-2">
-                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Acoustic</span>
-                                <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">Folk</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Artist 3 -->
-                    <div class="card bg-muted overflow-hidden hover-lift">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="DJ with electronic music setup" class="w-full h-64 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-testid="text-artist-3-name">NEON BEATS</h3>
-                            <p class="text-accent font-semibold mb-3">DJ/プロデューサー</p>
-                            <p class="text-muted-foreground">
-                                エレクトロニックミュージックの新星。独創的なビートと幻想的なサウンドでダンスフロアを熱狂させる。
-                            </p>
-                            <div class="mt-4 flex space-x-2">
-                                <span class="bg-accent text-white px-3 py-1 rounded-full text-sm">Electronic</span>
-                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">EDM</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <div class="section-divider"></div>
 
-        <!-- Schedule Section -->
-        <section id="schedule" class="py-20 light-section bg-muted text-foreground">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-5xl font-bold mb-6 text-primary">企画スケジュール</h2>
-                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        2日間のライブスケジュール詳細
-                    </p>
-                </div>
-                
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Day 1 -->
-                    <div class="card bg-card p-8 shadow-lg">
-                        <div class="p-0">
-                            <h3 class="text-3xl font-bold mb-6 text-primary flex items-center">
-                                <i class="fas fa-calendar-day mr-3"></i>
-                                11月2日（土）
-                            </h3>
-                            <div class="space-y-6">
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-primary w-20" data-testid="text-day1-time1">13:00</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">開場・受付開始</h4>
-                                        <p class="text-muted-foreground">チケット確認・入場開始</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-secondary w-20" data-testid="text-day1-time2">14:00</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">LUNA VOICE</h4>
-                                        <p class="text-muted-foreground">アコースティックライブ（60分）</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-accent w-20" data-testid="text-day1-time3">16:00</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">ELECTRIC WAVES</h4>
-                                        <p class="text-muted-foreground">ロックライブ（90分）</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-primary w-20" data-testid="text-day1-time4">18:30</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">交流タイム</h4>
-                                        <p class="text-muted-foreground">アーティストとのファンミーティング</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Day 2 -->
-                    <div class="card bg-card p-8 shadow-lg">
-                        <div class="p-0">
-                            <h3 class="text-3xl font-bold mb-6 text-secondary flex items-center">
-                                <i class="fas fa-calendar-day mr-3"></i>
-                                11月3日（日）
-                            </h3>
-                            <div class="space-y-6">
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-primary w-20" data-testid="text-day2-time1">13:00</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">開場・受付開始</h4>
-                                        <p class="text-muted-foreground">チケット確認・入場開始</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-accent w-20" data-testid="text-day2-time2">14:30</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">NEON BEATS</h4>
-                                        <p class="text-muted-foreground">DJセット（75分）</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-secondary w-20" data-testid="text-day2-time3">16:30</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">全アーティスト</h4>
-                                        <p class="text-muted-foreground">コラボレーションライブ（120分）</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-center space-x-4 p-4 bg-muted rounded-lg">
-                                    <div class="text-2xl font-bold text-primary w-20" data-testid="text-day2-time4">19:00</div>
-                                    <div>
-                                        <h4 class="font-semibold text-lg">フィナーレ</h4>
-                                        <p class="text-muted-foreground">エンディングセレモニー</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-divider"></div>
-
-        <!-- Venue Section -->
+                <!-- Venue Section -->
         <section id="venue" class="py-20 bg-card text-card-foreground">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-5xl font-bold mb-6 gradient-bg bg-clip-text text-transparent">会場案内</h2>
-                    <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        早稲田大学 大隈記念講堂へのアクセス情報
-                    </p>
+                    <h2 class="text-3xl font-bold mb-6 gradient-bg bg-clip-text">アクセス</h2>
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-12">
@@ -441,31 +203,19 @@
                                     アクセス方法
                                 </h3>
                                 <div class="space-y-3">
+                                    <p class="text-lg"><strong>東京メトロ東西線</strong></p>
+                                    <p class="text-muted-foreground" data-testid="text-access-waseda">早稲田駅から徒歩5分</p>  
                                     <p class="text-lg"><strong>JR山手線・東京メトロ東西線</strong></p>
                                     <p class="text-muted-foreground" data-testid="text-access-takadanobaba">高田馬場駅から徒歩20分</p>
                                     <p class="text-lg"><strong>東京メトロ副都心線</strong></p>
                                     <p class="text-muted-foreground" data-testid="text-access-nishiwaseda">西早稲田駅から徒歩17分</p>
-                                    <p class="text-lg"><strong>都営新宿線</strong></p>
-                                    <p class="text-muted-foreground" data-testid="text-access-waseda">早稲田駅から徒歩5分（推奨）</p>
+                                    <p class="text-lg"><strong>都電荒川線</strong></p>
+                                    <p class="text-muted-foreground" data-testid="text-access-nishiwaseda">早稲田駅から徒歩5分</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="card bg-muted p-6">
-                            <div class="p-0">
-                                <h3 class="text-2xl font-semibold mb-4 flex items-center">
-                                    <i class="fas fa-info-circle text-secondary mr-3"></i>
-                                    会場情報
-                                </h3>
-                                <div class="space-y-2">
-                                    <p><strong>収容人数：</strong> <span data-testid="text-capacity">1,124席</span></p>
-                                    <p><strong>開場時間：</strong> <span data-testid="text-opening-time">各日13:00</span></p>
-                                    <p><strong>終了予定：</strong> <span data-testid="text-closing-time">各日20:00</span></p>
-                                    <p><strong>駐車場：</strong> なし（公共交通機関をご利用ください）</p>
-                                </div>
-                            </div>
-                        </div>
-                        
+
                         <div class="card bg-muted p-6">
                             <div class="p-0">
                                 <h3 class="text-2xl font-semibold mb-4 flex items-center">
@@ -473,92 +223,56 @@
                                     注意事項
                                 </h3>
                                 <ul class="space-y-2 text-muted-foreground">
-                                    <li>• 再入場は不可</li>
-                                    <li>• 録音・録画・撮影禁止</li>
-                                    <li>• 飲食物の持ち込み禁止</li>
-                                    <li>• 大きな荷物の持ち込み不可</li>
+                                    <li>再入場は不可</li>
+                                    <li>録音・録画・撮影禁止</li>
+                                    <li>飲食物の持ち込み禁止</li>
+                                    <li>大きな荷物の持ち込み不可</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     
                     <div class="venue-map p-8 rounded-xl">
-                        <h3 class="text-2xl font-semibold mb-6 text-center">会場見取り図</h3>
-                        <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="University campus aerial view" class="rounded-lg w-full shadow-lg">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="bg-primary text-white p-4 rounded-lg shadow-lg text-center">
-                                    <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
-                                    <p class="font-bold">大隈記念講堂</p>
-                                    <p class="text-sm">メイン会場</p>
-                                </div>
-                            </div>
-                            
-                            <div class="absolute top-4 right-4 bg-secondary text-white p-2 rounded-lg">
-                                <i class="fas fa-shopping-cart mr-1"></i>
-                                <span class="text-sm">物販</span>
-                            </div>
-                            
-                            <div class="absolute bottom-4 left-4 bg-accent text-white p-2 rounded-lg">
-                                <i class="fas fa-parking mr-1"></i>
-                                <span class="text-sm">受付</span>
-                            </div>
-                        </div>
-                        
+                          
+                                <h3 class="text-2xl font-semibold mb-4 flex items-center makeblack">
+                                    <i class="fas fa-map-marker-alt text-2xl text-accent mr-3"></i>
+                                    詳細地図
+                                </h3>
+
                         <div class="mt-6 text-center">
-                            <p class="text-muted-foreground">
-                                最寄り駅からの詳細な道案内は、当日配布されるパンフレットをご確認ください。
-                            </p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8252776973814!2d139.7174666!3d35.705917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1c2e2fe2cd%3A0xa42419d86c0ce589!2z5pep56iy55Sw44Ki44Oq44O844OKICgzN-WPt-mkqCk!5e0!3m2!1sja!2sjp!4v1758617989839!5m2!1sja!2sjp"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+
+
+        <div class="section-divider"></div>
+
+
         <!-- Footer -->
         <footer class="bg-background border-t border-border py-12">
             <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div>
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold">W</div>
-                            <span class="text-xl font-bold">早稲田祭ライブ2024</span>
-                        </div>
-                        <p class="text-muted-foreground">
-                            音楽で繋がる、青春の瞬間をお届けします。皆様のご来場を心よりお待ちしております。
-                        </p>
-                    </div>
+                <div class=" gap-8">
                     
                     <div>
-                        <h4 class="text-lg font-semibold mb-4">お問い合わせ</h4>
-                        <p class="text-muted-foreground">
-                            早稲田祭ライブ実行委員会<br />
-                            Email: <span data-testid="text-contact-email">live2024@wasedafest.com</span><br />
-                            Tel: <span data-testid="text-contact-phone">03-3203-4141</span>
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-lg font-semibold mb-4">SNSフォロー</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition-colors" data-testid="link-twitter">
+                            <a href="https://x.com/WasedaGroove" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/80 transition-colors" data-testid="link-twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-secondary/80 transition-colors" data-testid="link-instagram">
+                            <a href="https://www.instagram.com/sound_waseda_groove?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-secondary/80 transition-colors" data-testid="link-instagram">
                                 <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center hover:bg-accent/80 transition-colors" data-testid="link-youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-muted text-foreground flex items-center justify-center hover:bg-muted/80 transition-colors" data-testid="link-tiktok">
-                                <i class="fab fa-tiktok"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-                    <p>&copy; 2024 早稲田祭ライブ実行委員会. All rights reserved.</p>
+                    <p>&copy; Sound!&nbsp;Waseda Groove. All rights reserved.</p>
                 </div>
             </div>
         </footer>

@@ -9,8 +9,9 @@ html {
     scroll-behavior: smooth;
 }
 
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 body {
-    font-family: "Inter", "Noto Sans JP", sans-serif;
+	font-family: 'Noto Sans Japanese', sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -18,27 +19,27 @@ body {
 
 /* Color Variables */
 :root {
-    --background: hsl(222, 84%, 5%);
-    --foreground: hsl(210, 40%, 98%);
-    --card: hsl(222, 84%, 5%);
-    --card-foreground: hsl(210, 40%, 98%);
-    --primary: hsl(262, 83%, 58%);
-    --primary-foreground: hsl(210, 40%, 98%);
-    --secondary: hsl(217, 91%, 60%);
-    --secondary-foreground: hsl(222, 84%, 5%);
-    --muted: hsl(217, 32%, 17%);
-    --muted-foreground: hsl(215, 20%, 65%);
-    --accent: hsl(25, 95%, 53%);
-    --accent-foreground: hsl(210, 40%, 98%);
-    --destructive: hsl(356, 90%, 54%);
-    --destructive-foreground: hsl(0, 0%, 100%);
-    --border: hsl(217, 32%, 17%);
-    --input: hsl(217, 32%, 17%);
+    --background:#000000;
+    --foreground:#fff;
+    --card: #000;
+    --card-foreground: #fff;
+    --primary: #753C80;
+    --primary-foreground: #fff;
+    --secondary: #619CBF;
+    --secondary-foreground: #000;
+    --muted: #3F407A;
+    --muted-foreground: #ACAAC4;
+    --accent:#E8B159;
+    --accent-foreground: #fff;
+    --destructive:#D5758C;
+    --destructive-foreground:#fff;
+    --border: #3F407A;
+    --input:  #3F407A;
     --radius: 0.75rem;
 }
 
 /* Layout Classes */
-.font-sans { font-family: "Inter", "Noto Sans JP", sans-serif; }
+.font-sans { font-family: 'Noto Sans Japanese', sans-serif; }
 .text-foreground { color: var(--foreground); }
 .bg-background { background-color: var(--background); }
 .bg-card { background-color: var(--card); }
@@ -56,7 +57,7 @@ body {
 /* Container and Grid */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -90,6 +91,7 @@ body {
     .grid.lg\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
     .grid.lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 }
+
 
 /* Spacing */
 .gap-4 { gap: 1rem; }
@@ -163,7 +165,7 @@ body {
 .h-3 { height: 0.75rem; }
 .h-10 { height: 2.5rem; }
 .h-12 { height: 3rem; }
-.h-64 { height: 16rem; }
+.h-64 { height: 29rem; }
 .h-screen { height: 100vh; }
 .max-w-2xl { max-width: 42rem; }
 .max-w-4xl { max-width: 56rem; }
@@ -171,7 +173,8 @@ body {
 /* Display */
 .hidden { display: none !important; }
 .block { display: block; }
-.flex { display: flex; }
+.flex { display: flex;
+margin: 0 auto; }
 .grid { display: grid; }
 
 /* Flexbox */
@@ -188,7 +191,7 @@ body {
 .text-2xl { font-size: 1.5rem; line-height: 2rem; }
 .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
 .text-5xl { font-size: 3rem; line-height: 1; }
-.text-6xl { font-size: 3.75rem; line-height: 1; }
+.text-6xl { font-size:1.8rem; line-height: 1; }
 .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .font-bold { font-weight: 700; }
@@ -238,23 +241,22 @@ body {
     .md\:flex { display: flex; }
     .md\:hidden { display: none; }
     .md\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-    .md\:text-8xl { font-size: 6rem; line-height: 1; }
+    .md\:text-8xl { font-size: 4rem; line-height: 1; }
     .md\:flex-row { flex-direction: row; }
 }
 
 /* Custom Classes */
-.gradient-bg {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+
+.logoimg{
+    width:100%;
 }
 
-.hero-gradient {
-    background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #F97316 100%);
-}
+
 
 .bg-clip-text {
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    color: #fff;
 }
 
 .text-transparent {
@@ -282,8 +284,15 @@ body {
 }
 
 .slide-indicator {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color:#ACAAC4;
     cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+
+iframe{
+    width: 100%;
 }
 
 .slide-indicator.active {
@@ -323,20 +332,13 @@ body {
         var(--secondary) 100%);
 }
 
-/* Pattern overlay for fallback slides */
-.slide-fallback::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
-    z-index: 1;
+
+.makeblack{
+    color: #000;
+    padding-left: 3px;
 }
+/* Pattern overlay for fallback slides */
+
 
 /* Ensure slide images have fallback handling */
 .slide img {
@@ -357,12 +359,12 @@ body {
     right: 20px;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    background: rgba(139, 92, 246, 0.9);
+    background: #3F407A;
 }
 
 .floating-nav {
     backdrop-filter: blur(10px);
-    background: rgba(15, 23, 42, 0.95);
+    background: #000;
 }
 
 .section-divider {
@@ -377,12 +379,12 @@ body {
 
 .hover-lift:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 20px 40px #3F407A;
 }
 
 .venue-map {
     background: linear-gradient(45deg, #f0f9ff, #e0f2fe);
-    border: 2px dashed var(--primary);
+    border: 2px  var(--primary);
 }
 
 .card {
@@ -404,7 +406,7 @@ body {
 button {
     border: none;
     cursor: pointer;
-    font-family: inherit;
+    font-family: 'Noto Sans Japanese', sans-serif;
     font-size: inherit;
     background: transparent;
     color: inherit;
