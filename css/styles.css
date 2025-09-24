@@ -245,6 +245,13 @@ margin: 0 auto; }
     .md\:flex-row { flex-direction: row; }
 }
 
+@media (max-width: 768px) {
+    .cover-responsive { object-fit:fill;
+                    height: auto;
+                    border-radius: 0.75rem 0.75rem 0 0;
+    }
+}
+
 /* Custom Classes */
 
 .logoimg{
